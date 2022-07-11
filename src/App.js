@@ -1,16 +1,12 @@
-import './App.css';
-import Modal from './components/Modal';
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Modal>
-        <h2>10% off coupon code!</h2>
-        <p>use the code NINJA at checkout</p>
-      </Modal>
+      <h1>Magic Match</h1>
+      <button>New Game</button>
     </div>
   );
 }
 
-export default App;
+export default App
