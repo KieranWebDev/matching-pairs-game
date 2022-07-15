@@ -53,6 +53,12 @@ function App() {
     }
   }, [choiceOne, choiceTwo]);
 
+  //start a new game automatically
+
+  useEffect(() => {
+    shuffleCards();
+  }, []);
+
   //reset choices and increase turn
   function resetTurn() {
     setChoiceOne(null);
@@ -78,6 +84,7 @@ function App() {
           />
         ))}
       </div>
+      <h4>Turns:{turns}</h4>
     </div>
   );
 }
