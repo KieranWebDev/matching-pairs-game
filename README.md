@@ -4,7 +4,7 @@
 	View The Website <a href='https://kieran-gill-matching-pairs-game.vercel.app/'>here</a>
 </h3>
 
-## Project Details
+
 
 
   <table>
@@ -19,5 +19,11 @@
 		     </tr>
     </table>
 
-## What I learned and the challenges faced 
+## Project Details
 
+- A pelmanism game I created by following a Udemy Course. 
+- It allowed me to get some practice and reps in with UseState and useEffect. 
+- Also introduced a couple of CSS properties that I hadn’t encountered before, such as transform and transition, as well as a bit of practice with CSS Grid. 
+- The logic used to shuffle the cards was interesting. I think it was the first time that I had encountered the .sort method
+- The UseEffect hook was used to compare the players choices. I had previously only used UseEffect for fetching data, so it was interesting to see it used in this way. 
+- I also used React Helmet to add a favicon and title to the page.
