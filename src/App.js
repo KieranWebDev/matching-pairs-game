@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
+import { Helmet } from 'react-helmet';
 
 const cardImages = [
   { src: '/img/helmet-1.png', matched: false },
@@ -70,22 +71,28 @@ function App() {
   console.log(cards);
 
   return (
-    <div className="App">
-      <h1>Magic Match</h1>
-      <button onClick={shuffleCards}>New Game</button>
-      <div className="card-grid">
-        {cards.map((card) => (
-          <SingleCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
-          />
-        ))}
+    <>
+      <Helmet>
+        <title>Matching Pairs</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
+      <div className="App">
+        <h1>Magic Match</h1>
+        <button onClick={shuffleCards}>New Game</button>
+        <div className="card-grid">
+          {cards.map((card) => (
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+        <h4>Turns:{turns}</h4>
       </div>
-      <h4>Turns:{turns}</h4>
-    </div>
+    </>
   );
 }
 
